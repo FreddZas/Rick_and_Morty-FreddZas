@@ -1,0 +1,28 @@
+.form__location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.location__input {
+    box-shadow: 1px 1px 10px;
+    border-radius: 5px 0 0 5px;
+}
+  
+.location__button {
+    background-color: green;
+    color: white;
+    box-shadow: 1px 1px 8px 4px;
+    border-radius: 0 5px 5px 0;
+    padding: 0.1em 1em;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    padding-left: 1em;
+}
+.location__button:hover {
+    background-color: lightgreen;
+    color: rgba(81, 53, 53, 0.49);
+    font-weight: bold;
+    box-shadow: 1px 2px 15px 4px red;
+}

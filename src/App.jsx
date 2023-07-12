@@ -1,34 +1,23 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import axios from 'axios'
 import getRandomNumber from './utils/getRandomNumber'
 import LocationInfo from './components/LocationInfo'
 import ResidentCard from './components/ResidentCard'
 import FormLocation from './components/FormLocation'
+import useFetch from './hooks/useFetch'
 
 function App() {
 
-  const [location, setLocation] = useState()
+  // const [location, setLocation] = useState()
   const [idLocation, setIdLocation] = useState(getRandomNumber(126))
-  const [hasError, setHasError] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
+  // const [hasError, setHasError] = useState(false)
+  //const [isLoading, setIsLoading] = useState(true)
+
+  const url = `https://rickandmortyapi.com/api/location/${idLocation}`
+  const [location, getLocationById, hasError, isLoading] = useFetch(url)
 
   useEffect(() => {
-    setIsLoading(true)
-    axios
-    .get(`https://rickandmortyapi.com/api/location/${idLocation}`)
-    .then(res => {
-      setLocation(res.data)
-      setHasError(false)
-    })
-    .catch(err => {
-      console.log(err)
-      setHasError(true)
-    })
-    .finally(() => {
-      setIsLoading(false)
-    })
-    
+  getLocationById()
   }, [idLocation]) // Permite darle validez al texto ingresado en el input (renderizado)
 
   console.log(idLocation)

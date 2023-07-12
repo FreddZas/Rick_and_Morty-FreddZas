@@ -16,10 +16,6 @@ const FormLocation = ({setIdLocation}) => {
 
   return (
     <form onSubmit={handleSubmit} className="form__location">
-      <select>
-        <option value="id">Id</option>
-        <option value="name">Name</option>
-      </select>
         <input className="location__input" id="inputId" style={{boxShadow: '1px 1px 10px'}} type="text" placeholder="Values (1 - 126) "/>
         <button className="location__button">Search</button>
     </form>

@@ -1,5 +1,5 @@
 .resident{
-    background-color: var(--bg-card);
+    background-color: #072226;
     color: white;
     width: 100%;
     max-width: 300px;
@@ -18,7 +18,7 @@
 }
 .resident__status{
     width: 40%;
-    background-color: var(--bg-card);
+    background-color: #072226;
     position: absolute;
     left: 0;
     top: 1.2em;
